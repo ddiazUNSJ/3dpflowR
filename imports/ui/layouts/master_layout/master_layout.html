@@ -1,0 +1,11 @@
+<template name="MasterLayout">
+
+  <!-- {{> yield region='Header'}} -->
+  {{> Template.dynamic template=top}}
+  
+  <!-- {{> yield}} -->
+   {{> Template.dynamic template=main}}
+  
+  <!-- {{> yield region='Footer'}} -->
+   {{> Template.dynamic template=bottom}}
+</template>
