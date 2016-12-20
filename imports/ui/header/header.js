@@ -28,10 +28,16 @@ Template.Header.helpers({
    *    return Items.find();
    *  }
    */
-  activeIfTemplateIs: function (template) {
-    var currentRoute = Router.current();
-    return currentRoute && template === currentRoute.lookupTemplate() ? 'active' : '';
+// Flowrouter
+   activeIfTemplateIs: function (template) {
+    var currentRoute = FlowRouter.getRouteName();
+    return currentRoute && template === currentRoute ? 'active' : '';
   } , 
+  // Para IronRoute
+  // activeIfTemplateIs: function (template) {
+  //   var currentRoute = Router.current();
+  //   return currentRoute && template === currentRoute.lookupTemplate() ? 'active' : '';
+  // } , 
   nombre: function(){
     var nombre= Meteor.user().profile.nombre;
       return nombre;
